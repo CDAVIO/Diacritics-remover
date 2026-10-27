@@ -1,6 +1,6 @@
-# Diacritics Remover
+# Curat, Diacritics Remover
 
-A free web tool by CDAV.IO that strips diacritics, smart quotes and invisible special spaces from text, so it can go into systems that mangle them: recruitment portals, old CRMs, CSV imports, email subject lines and file names.
+**Curat** (Romanian for "clean") is a free web tool by CDAV.IO that strips diacritics, smart quotes and invisible special spaces from text, so it can go into systems that mangle them: recruitment portals, old CRMs, CSV imports, email subject lines and file names.
 
 It is built for Romanian text and the foreign names that appear in Romanian CVs. It is one HTML file with no dependencies. It runs entirely in your browser, makes no network requests and works when opened straight from disk.
 
@@ -29,7 +29,7 @@ Both encodings are handled, because both are found in the wild.
 | ł Ł | Polish | l L |
 | ø Ø | Danish, Norwegian | o O |
 | đ Đ | Croatian, Serbian, Vietnamese | d D |
-| ß ẞ | German | ss SS, or s S with the option |
+| ß ẞ | German | ss SS |
 | æ Æ | Ligature | ae AE |
 | œ Œ | Ligature | oe OE |
 | ð Ð | Icelandic eth | d D |
@@ -37,7 +37,7 @@ Both encodings are handled, because both are found in the wild.
 | ı | Turkish dotless i | i |
 | İ | Turkish capital dotted I | I |
 | å Å | Nordic | a A |
-| ä ö ü Ä Ö Ü | German | a o u A O U, or ae oe ue AE OE UE with the option |
+| ä ö ü Ä Ö Ü | German | a o u A O U |
 
 A few extras are mapped as well: ħ, ŧ, ŀ, ĳ and the fi and fl ligatures.
 
@@ -57,26 +57,37 @@ Characters with no plain equivalent, such as € or Cyrillic letters, are left a
 ## How to use it
 
 1. Open `index.html` in any modern browser, or visit the published site.
-2. Paste or type into the left pane. The clean text appears on the right as you type.
-3. Click **Copy result**, or press Cmd + Enter on a Mac or Ctrl + Enter elsewhere.
+2. Press Cmd + V (Mac) or Ctrl + V anywhere on the page. The text is cleaned and the result is **copied to your clipboard automatically**.
+3. Paste it wherever you need it. You can also type in the left pane: the clean text updates on the right as you type, and Cmd + Enter or Ctrl + Enter copies it again.
 
 Below the panes you can see how many characters went in and out, how many were changed, and exactly which characters were replaced and how many times.
 
 Other controls:
 
-- **Paste** reads your clipboard into the left pane.
-- **Upload .txt or .csv** cleans a file and downloads the result under the same file name. UTF-8 is expected, Windows-1250 files are read as a fallback.
+- **Paste** reads your clipboard, cleans it and copies the result.
+- **Upload .txt or .csv**, or drop a file on the left pane, cleans the file and downloads the result under the same file name. UTF-8 is expected, Windows-1250 files are read as a fallback.
 - **Download** saves the current result.
 - **Clear** empties both panes.
-- **Expand German umlauts** turns ä into ae instead of a. Off by default.
-- **ß becomes** chooses between ss (default) and s.
-- The theme and language switches in the header are remembered in your browser.
+- The theme and language (English or Romanian) switches in the header are remembered in your browser.
+
+The page header shows a short animation: more than 60 words with diacritics, from Bună to Smørrebrød, lose their marks one after another.
 
 ## Development
 
 There is no build step. Edit `index.html` and reload. The conversion tests live in a comment at the top of the main script, one `TEST "input" => "expected"` line per case.
 
 `netlify.toml` copies `index.html`, `404.html`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. Replace `YOUR-SITE-URL` in `index.html`, `robots.txt` and `sitemap.xml` with the real address before going live.
+
+The conversion function also supports two options that the page does not show: expanding German umlauts (ä to ae) and turning ß into s. They are covered by the tests.
+
+## Security
+
+Nothing you paste leaves your browser. See [SECURITY.md](SECURITY.md) for how the page handles your text and how to report a vulnerability.
+
+## Links
+
+- Bugs and ideas: [open an issue](https://github.com/CDAVIO/Diacritics-remover/issues/new)
+- [cdav.io](https://cdav.io/), [GitHub](https://github.com/CDAVIO), [LinkedIn](https://www.linkedin.com/in/cristea-david/), [Instagram](https://www.instagram.com/cdav.io/)
 
 ## Licence
 
