@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://diacr.cdav.io/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

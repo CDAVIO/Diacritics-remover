@@ -80,9 +80,14 @@ The page header shows a short animation: more than 60 words with diacritics, fro
 
 There is no build step. Edit `index.html` and reload. The conversion tests live in a comment at the top of the main script, one `TEST "input" => "expected"` line per case.
 
-`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `preview.png`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
+`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `preview.png`, `robots.txt`, `sitemap.xml` and the two guide folders into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
 
 The conversion function also supports two options that the page does not show: expanding German umlauts (ä to ae) and turning ß into s. They are covered by the tests.
+
+## Guides
+
+- [Why remove diacritics? 15 real reasons and examples](https://diacr.cdav.io/why-remove-diacritics/)
+- [De ce să elimini diacriticele? 15 motive reale și exemple](https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/)
 
 ## Security
 

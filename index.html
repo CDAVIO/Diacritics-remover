@@ -449,6 +449,7 @@
       </a>
     </div>
     <ul class="links">
+      <li><a id="whyLink" href="why-remove-diacritics/" data-i18n="why"></a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/LICENSE" rel="noopener" data-i18n="license"></a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover" rel="noopener">GitHub CDAVIO/Diacritics-remover</a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/SECURITY.md" rel="noopener" data-i18n="security"></a></li>
@@ -612,6 +613,7 @@ function cleanText(input, opts) {
       fileType: 'Please choose a .txt or .csv file.',
       themeToLight: 'Switch to light theme',
       themeToDark: 'Switch to dark theme',
+      why: 'Why remove diacritics? 15 reasons',
       license: 'MIT License',
       security: 'Security',
       developedBy: 'Developed by',
@@ -661,6 +663,7 @@ function cleanText(input, opts) {
       fileType: 'Alege un fișier .txt sau .csv.',
       themeToLight: 'Comută la tema deschisă',
       themeToDark: 'Comută la tema întunecată',
+      why: 'De ce să elimini diacriticele? 15 motive',
       license: 'Licență MIT',
       security: 'Securitate',
       developedBy: 'Dezvoltat de',
@@ -722,6 +725,7 @@ function cleanText(input, opts) {
     $('shortcutHint').textContent = t('shortcut', { key: modKey });
     $('tip').innerHTML = t('tip', { paste: kbd([modKey, 'V']), copy: kbd([modKey, 'Enter']) });
     $('langName').textContent = t('langName');
+    $('whyLink').href = lang === 'ro' ? 'de-ce-sa-elimini-diacriticele/' : 'why-remove-diacritics/';
     $('langBtn').setAttribute('aria-label', t('langAria'));
     if (copiedTimer) copyLabel.textContent = t('copied');
     applyThemeLabel();
