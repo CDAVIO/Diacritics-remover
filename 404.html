@@ -7,7 +7,7 @@
 <title>404 | CDAV.IO</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0c0c0c">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230c0c0c'/%3E%3Cpath d='M23 12q9 9 18 0' fill='none' stroke='%23FFD905' stroke-width='5' stroke-linecap='round' opacity='.45' transform='rotate(-14 32 12)'/%3E%3Cpath d='M41 25v24M41 30c-2-3-5-5-9-5c-7 0-11 5-11 12s4 12 11 12c4 0 7-2 9-5' fill='none' stroke='%23FFD905' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3CclipPath id='r'%3E%3Crect width='512' height='512' rx='112'/%3E%3C/clipPath%3E%3ClinearGradient id='s' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='.16'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg clip-path='url(%23r)'%3E%3Crect width='512' height='512' fill='%23F2F2EE'/%3E%3Cpath d='M300 0Q236 256 290 512H340Q286 256 350 0Z' fill='url(%23s)'/%3E%3Cpath d='M0 0H300Q236 256 290 512H0Z' fill='%23FFD905'/%3E%3Ctext x='138' y='338' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='178' letter-spacing='-6' fill='%23111111'%3E%26%23256;%26%23226;%3C/text%3E%3Ctext x='396' y='330' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='136' letter-spacing='-4' fill='%235F5F5A'%3EAa%3C/text%3E%3C/g%3E%3C/svg%3E">
 <script>
   (function () {
     var d = document.documentElement, t = null, l = null;
@@ -44,6 +44,8 @@
   header .wrap { display: flex; align-items: center; min-height: 72px; }
   .wordmark { font-family: var(--font-mark); font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--text); text-decoration: none; }
   .wordmark .io { color: var(--yellow); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand img { display: block; border-radius: 9px; }
   main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 16px; text-align: center; }
   .code { margin: 0; font-family: var(--font-mark); font-weight: 800; font-size: clamp(88px, 22vw, 160px); line-height: 1; letter-spacing: -0.03em; }
   .code span { color: var(--yellow); text-shadow: 0 0 40px rgba(255, 217, 5, 0.45); }
@@ -61,12 +63,12 @@
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="wordmark" href="/">CDAV.<span class="io">IO</span></a></div></header>
+<header><div class="wrap"><a class="brand" href="/" aria-label="Neat by CDAV.IO"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3CclipPath id='r'%3E%3Crect width='512' height='512' rx='112'/%3E%3C/clipPath%3E%3ClinearGradient id='s' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='.16'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg clip-path='url(%23r)'%3E%3Crect width='512' height='512' fill='%23F2F2EE'/%3E%3Cpath d='M300 0Q236 256 290 512H340Q286 256 350 0Z' fill='url(%23s)'/%3E%3Cpath d='M0 0H300Q236 256 290 512H0Z' fill='%23FFD905'/%3E%3Ctext x='138' y='338' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='178' letter-spacing='-6' fill='%23111111'%3E%26%23256;%26%23226;%3C/text%3E%3Ctext x='396' y='330' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='136' letter-spacing='-4' fill='%235F5F5A'%3EAa%3C/text%3E%3C/g%3E%3C/svg%3E" alt="" width="34" height="34"><span class="wordmark">CDAV.<span class="io">IO</span></span></a></div></header>
 <main>
   <div>
     <p class="code">4<span>0</span>4</p>
     <p class="line" id="line">This page lost more than its diacritics.</p>
-    <a class="btn" href="/" id="home">Back to Curat</a>
+    <a class="btn" href="/" id="home">Back to Neat</a>
   </div>
 </main>
 <footer>
@@ -77,7 +79,7 @@
   document.getElementById('year').textContent = String(new Date().getFullYear());
   if (document.documentElement.lang === 'ro') {
     document.getElementById('line').textContent = 'Această pagină a pierdut mai mult decât diacriticele.';
-    document.getElementById('home').textContent = 'Înapoi la Curat';
+    document.getElementById('home').textContent = 'Înapoi la Neat';
     document.getElementById('dev').textContent = 'Dezvoltat de';
   }
 </script>

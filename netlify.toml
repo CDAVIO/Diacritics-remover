@@ -1,6 +1,6 @@
 # Publishes only the site files. There is no build: the command just copies them.
 [build]
-  command = "mkdir -p dist && cp index.html 404.html robots.txt sitemap.xml dist/"
+  command = "mkdir -p dist && cp index.html 404.html icon.svg robots.txt sitemap.xml dist/"
   publish = "dist"
 
 [[headers]]

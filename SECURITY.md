@@ -1,8 +1,8 @@
 # Security Policy
 
-## How Curat handles your text
+## How Neat handles your text
 
-Curat is a single static HTML page. Everything happens in your browser:
+Neat is a single static HTML page. Everything happens in your browser:
 
 - No text, file or clipboard content is ever sent anywhere. There is no server, no account, no analytics and no telemetry.
 - The page sets a strict Content-Security-Policy (`connect-src 'none'`, `default-src 'none'`), so the browser itself blocks any network request after the page loads.
