@@ -180,7 +180,7 @@
     height: clamp(96px, 20vw, 180px);
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
-    margin: 10px 0 0;
+    margin: 22px 0 0;
   }
   .word {
     --len: 6;
@@ -366,10 +366,10 @@
         <img alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230c0c0c'/%3E%3Cpath d='M23 12q9 9 18 0' fill='none' stroke='%23FFD905' stroke-width='5' stroke-linecap='round' opacity='.45' transform='rotate(-14 32 12)'/%3E%3Cpath d='M41 25v24M41 30c-2-3-5-5-9-5c-7 0-11 5-11 12s4 12 11 12c4 0 7-2 9-5' fill='none' stroke='%23FFD905' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
         <span><b>Curat</b> <span data-i18n="eyebrow"></span></span>
       </span>
-      <div class="stage" aria-hidden="true"><div class="word" id="word"></div></div>
-      <p class="caption" id="caption" aria-hidden="true"></p>
       <h1 data-i18n-html="headline"></h1>
       <p class="lede" data-i18n-html="lede"></p>
+      <div class="stage" aria-hidden="true"><div class="word" id="word"></div></div>
+      <p class="caption" id="caption" aria-hidden="true"></p>
     </section>
 
     <section class="card" aria-label="Diacritics remover">
@@ -453,7 +453,6 @@
     <ul class="links">
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/LICENSE" rel="noopener" data-i18n="license"></a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover" rel="noopener">GitHub CDAVIO/Diacritics-remover</a></li>
-      <li><a href="https://github.com/CDAVIO/Diacritics-remover/issues/new" rel="noopener" data-i18n="bug"></a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/SECURITY.md" rel="noopener" data-i18n="security"></a></li>
     </ul>
     <p class="dev"><span data-i18n="developedBy"></span> <a class="wordmark" href="https://cdav.io/" rel="noopener">CDAV.<span class="io">IO</span></a></p>
@@ -616,7 +615,6 @@ function cleanText(input, opts) {
       themeToLight: 'Switch to light theme',
       themeToDark: 'Switch to dark theme',
       license: 'MIT License',
-      bug: 'Report a bug',
       security: 'Security',
       developedBy: 'Developed by',
       openSource: 'open source under the MIT License',
@@ -666,7 +664,6 @@ function cleanText(input, opts) {
       themeToLight: 'Comută la tema deschisă',
       themeToDark: 'Comută la tema întunecată',
       license: 'Licență MIT',
-      bug: 'Raportează o problemă',
       security: 'Securitate',
       developedBy: 'Dezvoltat de',
       openSource: 'open source sub licența MIT',
