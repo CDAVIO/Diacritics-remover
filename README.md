@@ -1,8 +1,8 @@
 <img src="icon.svg" alt="" width="96" height="96">
 
-# Neat, Diacritics Remover
+# DIACR, Diacritics Remover
 
-**Neat** ([neat.cdav.io](https://neat.cdav.io/)) is a free web tool by CDAV.IO that strips diacritics, smart quotes and invisible special spaces from text, so it can go into systems that mangle them: recruitment portals, old CRMs, CSV imports, email subject lines and file names.
+**DIACR** ([diacr.cdav.io](https://diacr.cdav.io/)) is a free web tool by CDAV.IO that strips diacritics, smart quotes and invisible special spaces from text, so it can go into systems that mangle them: recruitment portals, old CRMs, CSV imports, email subject lines and file names.
 
 It is built for Romanian text and the foreign names that appear in Romanian CVs. It is one HTML file with no dependencies. It runs entirely in your browser, makes no network requests and works when opened straight from disk.
 
@@ -78,7 +78,7 @@ The page header shows a short animation: more than 60 words with diacritics, fro
 
 There is no build step. Edit `index.html` and reload. The conversion tests live in a comment at the top of the main script, one `TEST "input" => "expected"` line per case.
 
-`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. The site is meant to be served at `https://neat.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
+`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
 
 The conversion function also supports two options that the page does not show: expanding German umlauts (ä to ae) and turning ß into s. They are covered by the tests.
 

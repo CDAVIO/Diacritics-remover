@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neat.cdav.io/sitemap.xml
+Sitemap: https://diacr.cdav.io/sitemap.xml

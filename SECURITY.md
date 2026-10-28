@@ -1,8 +1,8 @@
 # Security Policy
 
-## How Neat handles your text
+## How DIACR handles your text
 
-Neat is a single static HTML page. Everything happens in your browser:
+DIACR is a single static HTML page. Everything happens in your browser:
 
 - No text, file or clipboard content is ever sent anywhere. There is no server, no account, no analytics and no telemetry.
 - The page sets a strict Content-Security-Policy (`connect-src 'none'`, `default-src 'none'`), so the browser itself blocks any network request after the page loads.
