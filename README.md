@@ -2,6 +2,8 @@
 
 # DIACR, Diacritics Remover
 
+![DIACR turns Bună into Buna: paste anywhere, the diacritics are removed and the clean text is copied for you](preview.png)
+
 **DIACR** ([diacr.cdav.io](https://diacr.cdav.io/)) is a free web tool by CDAV.IO that strips diacritics, smart quotes and invisible special spaces from text, so it can go into systems that mangle them: recruitment portals, old CRMs, CSV imports, email subject lines and file names.
 
 It is built for Romanian text and the foreign names that appear in Romanian CVs. It is one HTML file with no dependencies. It runs entirely in your browser, makes no network requests and works when opened straight from disk.
@@ -70,7 +72,7 @@ Other controls:
 - **Upload .txt or .csv**, or drop a file on the left pane, cleans the file and downloads the result under the same file name. UTF-8 is expected, Windows-1250 files are read as a fallback.
 - **Download** saves the current result.
 - **Clear** empties both panes.
-- The theme and language (English or Romanian) switches in the header are remembered in your browser.
+- The page opens in dark mode. The theme and language (English or Romanian) switches in the header are remembered in your browser.
 
 The page header shows a short animation: more than 60 words with diacritics, from Bună to Smørrebrød, lose their marks one after another.
 
@@ -78,7 +80,7 @@ The page header shows a short animation: more than 60 words with diacritics, fro
 
 There is no build step. Edit `index.html` and reload. The conversion tests live in a comment at the top of the main script, one `TEST "input" => "expected"` line per case.
 
-`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
+`netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `preview.png`, `robots.txt` and `sitemap.xml` into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
 
 The conversion function also supports two options that the page does not show: expanding German umlauts (ä to ae) and turning ß into s. They are covered by the tests.
 
