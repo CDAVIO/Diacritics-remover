@@ -80,6 +80,8 @@ The page header shows a short animation: more than 60 words with diacritics, fro
 
 There is no build step. Edit `index.html` and reload. The conversion tests live in a comment at the top of the main script, one `TEST "input" => "expected"` line per case.
 
+The two guide pages are plain static HTML. To change their text, edit the data in `scripts/build-guides.js` and run `node scripts/build-guides.js`. The script uses the conversion code from `index.html`, so every before and after example matches the tool. The site itself never runs it.
+
 `netlify.toml` copies `index.html`, `404.html`, `icon.svg`, `preview.png`, `robots.txt`, `sitemap.xml` and the two guide folders into a `dist` folder and publishes that. The site is meant to be served at `https://diacr.cdav.io/`. Point that subdomain at the Netlify site in your DNS settings.
 
 The conversion function also supports two options that the page does not show: expanding German umlauts (ä to ae) and turning ß into s. They are covered by the tests.
