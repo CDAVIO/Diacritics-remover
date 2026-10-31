@@ -53,7 +53,6 @@
   }
   .btn:hover { filter: brightness(0.97); }
   footer { padding: 28px 0 36px; text-align: center; }
-  .dev { margin: 0 0 6px; font-family: var(--font-mark); font-weight: 800; font-size: 16px; color: var(--muted); }
   .copy { margin: 0; font-size: 13px; color: var(--muted); }
 </style>
 </head>
@@ -67,15 +66,13 @@
   </div>
 </main>
 <footer>
-  <p class="dev"><span id="dev">Developed by</span> <a class="wordmark" href="https://cdav.io/" rel="noopener">CDAV.<span class="io">IO</span></a></p>
-  <p class="copy">&copy; <span id="year">2026</span> CDAV.IO</p>
+  <p class="copy">Copyright &copy; <span id="year">2026</span> CDAV.IO. All rights reserved.</p>
 </footer>
 <script>
   document.getElementById('year').textContent = String(new Date().getFullYear());
   if (document.documentElement.lang === 'ro') {
     document.getElementById('line').textContent = 'Această pagină a pierdut mai mult decât diacriticele.';
     document.getElementById('home').textContent = 'Înapoi la DIACR';
-    document.getElementById('dev').textContent = 'Dezvoltat de';
   }
 </script>
 </body>

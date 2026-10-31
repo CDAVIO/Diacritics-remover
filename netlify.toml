@@ -1,6 +1,6 @@
 # Publishes only the site files. There is no build: the command just copies them.
 [build]
-  command = "mkdir -p dist && cp index.html 404.html icon.svg preview.png robots.txt sitemap.xml dist/ && cp -R why-remove-diacritics de-ce-sa-elimini-diacriticele dist/"
+  command = "mkdir -p dist && cp index.html 404.html icon.svg preview.png robots.txt sitemap.xml dist/ && cp -R why-remove-diacritics de-ce-sa-elimini-diacriticele terms privacy dist/"
   publish = "dist"
 
 [[headers]]

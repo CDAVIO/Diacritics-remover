@@ -2,17 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://diacr.cdav.io/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-31</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/terms/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/privacy/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://diacr.cdav.io/why-remove-diacritics/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/"/>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -20,8 +28,247 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/"/>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-31</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-cv-and-recruitment-portals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-cv-and-recruitment-portals/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cv-si-portaluri-de-recrutare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-cv-and-recruitment-portals/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cv-si-portaluri-de-recrutare/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-cv-and-recruitment-portals/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cv-si-portaluri-de-recrutare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-cv-and-recruitment-portals/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-csv-and-excel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-csv-and-excel/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-csv-si-excel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-csv-and-excel/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-csv-si-excel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-csv-and-excel/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-csv-si-excel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-csv-and-excel/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-file-names-and-links/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-file-names-and-links/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-de-fisiere-si-linkuri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-file-names-and-links/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-de-fisiere-si-linkuri/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-file-names-and-links/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-de-fisiere-si-linkuri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-file-names-and-links/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-email-subjects-and-sms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-email-subjects-and-sms/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-subiect-email-si-sms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-email-subjects-and-sms/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-subiect-email-si-sms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-email-subjects-and-sms/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-subiect-email-si-sms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-email-subjects-and-sms/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-online-forms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-online-forms/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-formulare-online/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-online-forms/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-formulare-online/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-online-forms/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-formulare-online/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-online-forms/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-urls-and-seo-slugs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-urls-and-seo-slugs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-url-si-slug-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-urls-and-seo-slugs/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-url-si-slug-seo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-urls-and-seo-slugs/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-url-si-slug-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-urls-and-seo-slugs/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-usernames-and-email-addresses/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-usernames-and-email-addresses/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-utilizator-si-email/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-usernames-and-email-addresses/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-utilizator-si-email/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-usernames-and-email-addresses/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-nume-utilizator-si-email/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-usernames-and-email-addresses/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-and-duplicate-crm-records/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-duplicate-crm-records/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-duplicate-in-crm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-duplicate-crm-records/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-duplicate-in-crm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-duplicate-crm-records/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-duplicate-in-crm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-duplicate-crm-records/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-on-printers-and-receipts/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-on-printers-and-receipts/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-la-imprimante-si-bonuri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-on-printers-and-receipts/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-la-imprimante-si-bonuri/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-on-printers-and-receipts/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-la-imprimante-si-bonuri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-on-printers-and-receipts/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-code-and-databases/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-code-and-databases/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cod-si-baze-de-date/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-code-and-databases/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cod-si-baze-de-date/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-code-and-databases/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-cod-si-baze-de-date/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-code-and-databases/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-bank-transfers-and-invoices/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-bank-transfers-and-invoices/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-transferuri-bancare-si-facturi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-bank-transfers-and-invoices/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-transferuri-bancare-si-facturi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-bank-transfers-and-invoices/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-transferuri-bancare-si-facturi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-bank-transfers-and-invoices/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-in-hashtags-and-social-media/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-hashtags-and-social-media/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-hashtag-uri-si-retele-sociale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-hashtags-and-social-media/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-hashtag-uri-si-retele-sociale/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-hashtags-and-social-media/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-in-hashtag-uri-si-retele-sociale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-in-hashtags-and-social-media/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/cedilla-vs-comma-romanian-letters/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/cedilla-vs-comma-romanian-letters/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/s-si-t-cu-sedila-sau-cu-virgula/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/cedilla-vs-comma-romanian-letters/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/s-si-t-cu-sedila-sau-cu-virgula/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/cedilla-vs-comma-romanian-letters/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/s-si-t-cu-sedila-sau-cu-virgula/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/cedilla-vs-comma-romanian-letters/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/clean-text-copied-from-word-or-pdf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/clean-text-copied-from-word-or-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/curatare-text-copiat-din-word-sau-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/clean-text-copied-from-word-or-pdf/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/curatare-text-copiat-din-word-sau-pdf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/clean-text-copied-from-word-or-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/curatare-text-copiat-din-word-sau-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/clean-text-copied-from-word-or-pdf/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/why-remove-diacritics/diacritics-and-foreign-keyboards/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-foreign-keyboards/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-tastaturi-straine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-foreign-keyboards/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-tastaturi-straine/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-foreign-keyboards/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://diacr.cdav.io/de-ce-sa-elimini-diacriticele/diacritice-si-tastaturi-straine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diacr.cdav.io/why-remove-diacritics/diacritics-and-foreign-keyboards/"/>
+    <lastmod>2026-10-31</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

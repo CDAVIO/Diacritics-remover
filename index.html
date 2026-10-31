@@ -134,6 +134,7 @@
   a { color: inherit; }
   :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
   /* Header */
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
@@ -318,9 +319,77 @@
   .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin: 0 0 22px; padding: 0; list-style: none; font-size: 16px; }
   .links a { text-decoration: none; border-bottom: 1px solid var(--border-strong); padding-bottom: 2px; }
   .links a:hover { border-color: var(--accent); }
-  .dev { margin: 0 0 8px; font-family: var(--font-mark); font-weight: 800; font-size: 18px; color: var(--muted); }
-  .dev .wordmark { font-size: 18px; border-bottom: 1px solid var(--border-strong); padding-bottom: 2px; }
   .copy { margin: 0; font-size: 14px; color: var(--muted); }
+
+  /* Sections under the tool */
+  .section { margin: 72px 0 0; text-align: center; }
+  .section > h2 { margin: 0 0 8px; font-family: var(--font-mark); font-size: clamp(26px, 4vw, 38px); line-height: 1.1; letter-spacing: -.02em; }
+  .section > p { margin: 0 auto; max-width: 60ch; color: var(--muted); }
+
+  /* Demo player */
+  .player {
+    position: relative; display: flex; flex-direction: column;
+    max-width: 900px; aspect-ratio: 16 / 9; margin: 28px auto 0; overflow: hidden; text-align: left;
+    background: var(--surface-solid); border: 1px solid var(--border); border-radius: 22px; box-shadow: var(--shadow);
+  }
+  .p-bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--field); }
+  .p-dots { display: flex; gap: 6px; }
+  .p-dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--border-strong); }
+  .p-url { flex: 0 1 260px; padding: 3px 12px; font-family: var(--font-mono); font-size: 13px; color: var(--muted); background: var(--surface-solid); border: 1px solid var(--border); border-radius: 999px; }
+  .p-badge { margin-left: auto; padding: 4px 10px; font-size: 12px; font-weight: 800; border-radius: 999px; background: var(--accent); color: var(--on-accent); white-space: nowrap; }
+  .p-stage { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 14px; padding: 22px; }
+  .p-pane { min-width: 0; overflow: hidden; padding: 14px 16px; background: var(--field); border: 1px solid var(--border); border-radius: 14px; transition: border-color .3s, box-shadow .3s; }
+  .p-pane.on { border-color: var(--accent); box-shadow: 0 0 0 4px var(--glow); }
+  .p-out { background: var(--field-out); }
+  .p-label { display: block; margin-bottom: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .p-text { font-size: clamp(15px, 2.3vw, 23px); line-height: 1.45; font-weight: 600; overflow-wrap: anywhere; }
+  .p-text mark { color: var(--accent-ink); background: none; }
+  .p-out .p-text mark { color: inherit; background: var(--glow); border-radius: 4px; }
+  .p-text .h { opacity: 0; }
+  .p-mid { display: grid; place-items: center; }
+  .p-key {
+    padding: 8px 10px; font-family: var(--font-mono); font-size: 13px; font-weight: 700; white-space: nowrap;
+    background: var(--surface-solid); border: 1px solid var(--border-strong); border-bottom-width: 3px; border-radius: 10px;
+    transition: transform .15s, background .15s, color .15s;
+  }
+  .p-key.press { transform: translateY(2px); background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  .p-toast {
+    position: absolute; left: 50%; bottom: 70px; transform: translate(-50%, 12px); opacity: 0;
+    padding: 10px 18px; font-size: 14px; font-weight: 700; white-space: nowrap;
+    background: var(--text); color: var(--bg); border-radius: 999px; transition: opacity .35s, transform .35s;
+  }
+  .p-toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .p-steps { display: flex; gap: 8px; margin: 0; padding: 0 22px 16px; list-style: none; counter-reset: step; }
+  .p-steps li {
+    flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 10px; font-size: 13px; font-weight: 600; color: var(--muted);
+    border: 1px solid var(--border); border-radius: 10px; transition: color .3s, border-color .3s;
+  }
+  .p-steps li::before {
+    counter-increment: step; content: counter(step); flex: none; display: grid; place-items: center;
+    width: 20px; height: 20px; font-size: 12px; color: var(--text); background: var(--border); border-radius: 50%;
+  }
+  .p-steps li.on { color: var(--text); border-color: var(--accent); }
+  .p-steps li.on::before { background: var(--accent); color: var(--on-accent); }
+  .p-progress { height: 3px; background: var(--border); }
+  .p-progress span { display: block; width: 0; height: 100%; background: var(--accent); }
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .badges li { padding: 6px 14px; font-size: 14px; font-weight: 600; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
+  .badges li::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: 1px; }
+
+  /* DIACR vs other tools */
+  .vs { max-width: 900px; margin: 28px auto 0; overflow: hidden; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+  .vs table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .vs th, .vs td { padding: 13px 16px; border-top: 1px solid var(--border); vertical-align: middle; }
+  .vs thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--surface-solid); }
+  .vs thead th.us { color: var(--accent-ink); font-size: 14px; }
+  .vs tbody th { font-weight: 600; text-align: left; }
+  .vs td { color: var(--muted); }
+  .vs td.us { color: var(--text); font-weight: 600; }
+  .vs .mark { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; font-size: 12px; font-weight: 800; border-radius: 50%; vertical-align: middle; }
+  .vs .yes { background: var(--accent); color: #111; }
+  .vs .no { background: rgba(229, 72, 77, 0.16); color: #e5484d; }
+  .vs-note { max-width: 900px; margin: 12px auto 0; font-size: 13px; color: var(--muted); }
+  .guide-cta { display: inline-block; margin-top: 24px; font-weight: 700; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid currentColor; }
 
   @media (max-width: 760px) {
     .hero { padding-top: 14px; }
@@ -333,6 +402,15 @@
     .toolbar .btn { flex: 1 1 auto; justify-content: center; }
     .toolbar .btn-primary { flex-basis: 100%; order: -1; }
     .socials a { width: 50px; height: 50px; }
+    .player { aspect-ratio: auto; }
+    .p-stage { grid-template-columns: minmax(0, 1fr); padding: 14px; gap: 10px; }
+    .p-pane { min-height: 96px; }
+    .p-url { display: none; }
+    .p-steps { padding: 0 14px 14px; gap: 6px; }
+    .p-steps li { padding: 6px; font-size: 12px; gap: 6px; }
+    .p-toast { bottom: 64px; }
+    .vs th, .vs td { padding: 10px; font-size: 14px; }
+    .vs .mark { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition-duration: 0.01ms !important; }
@@ -432,6 +510,40 @@
         </div>
       </div>
     </section>
+
+    <section class="section" aria-labelledby="demoTitle">
+      <h2 id="demoTitle" data-i18n="demoTitle"></h2>
+      <p data-i18n="demoText"></p>
+      <div class="player" id="player" role="img" data-i18n-aria="demoAria">
+        <div class="p-bar">
+          <span class="p-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="p-url">diacr.cdav.io</span>
+          <span class="p-badge" data-i18n="noAds"></span>
+        </div>
+        <div class="p-stage">
+          <div class="p-pane" id="pInPane"><span class="p-label" data-i18n="inputLabel"></span><div class="p-text" id="pIn"></div></div>
+          <div class="p-mid"><span class="p-key" id="pKey">Cmd + V</span></div>
+          <div class="p-pane p-out" id="pOutPane"><span class="p-label" data-i18n="outputLabel"></span><div class="p-text" id="pOut"></div></div>
+        </div>
+        <div class="p-toast" id="pToast"></div>
+        <ol class="p-steps"><li data-i18n="step1"></li><li data-i18n="step2"></li><li data-i18n="step3"></li></ol>
+        <div class="p-progress"><span id="pProg"></span></div>
+      </div>
+      <ul class="badges"><li data-i18n="b1"></li><li data-i18n="b2"></li><li data-i18n="b3"></li><li data-i18n="b4"></li></ul>
+    </section>
+
+    <section class="section" aria-labelledby="vsTitle">
+      <h2 id="vsTitle" data-i18n="vsTitle"></h2>
+      <p data-i18n="vsText"></p>
+      <div class="vs">
+        <table>
+          <thead><tr><th scope="col"><span class="visually-hidden" data-i18n="vsFeature"></span></th><th scope="col" class="us">DIACR</th><th scope="col" data-i18n="vsOther"></th></tr></thead>
+          <tbody id="vsBody"></tbody>
+        </table>
+      </div>
+      <p class="vs-note" data-i18n="vsNote"></p>
+      <a class="guide-cta" id="whyLink" href="why-remove-diacritics/" data-i18n="why"></a>
+    </section>
   </div>
 </main>
 
@@ -449,13 +561,12 @@
       </a>
     </div>
     <ul class="links">
-      <li><a id="whyLink" href="why-remove-diacritics/" data-i18n="why"></a></li>
+      <li><a href="terms/" data-i18n="terms"></a></li>
+      <li><a href="privacy/" data-i18n="privacy"></a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/LICENSE" rel="noopener" data-i18n="license"></a></li>
-      <li><a href="https://github.com/CDAVIO/Diacritics-remover" rel="noopener">GitHub CDAVIO/Diacritics-remover</a></li>
       <li><a href="https://github.com/CDAVIO/Diacritics-remover/blob/main/SECURITY.md" rel="noopener" data-i18n="security"></a></li>
     </ul>
-    <p class="dev"><span data-i18n="developedBy"></span> <a class="wordmark" href="https://cdav.io/" rel="noopener">CDAV.<span class="io">IO</span></a></p>
-    <p class="copy">&copy; <span id="year">2026</span> CDAV.IO, <span data-i18n="openSource"></span></p>
+    <p class="copy">Copyright &copy; <span id="year">2026</span> CDAV.IO. All rights reserved.</p>
   </div>
 </footer>
 
@@ -616,8 +727,37 @@ function cleanText(input, opts) {
       why: 'Why remove diacritics? 15 reasons',
       license: 'MIT License',
       security: 'Security',
-      developedBy: 'Developed by',
-      openSource: 'open source under the MIT License',
+      terms: 'Terms',
+      privacy: 'Privacy Policy',
+      statTime: 'cleaned in {t}',
+      demoTitle: 'See how it works',
+      demoText: 'Ten seconds, no ads, no sign-up, nothing to install.',
+      demoAria: 'Animated demo: text with diacritics is pasted, cleaned and copied automatically.',
+      noAds: 'No ads',
+      step1: 'Paste anywhere',
+      step2: 'Diacritics removed',
+      step3: 'Copied for you',
+      demoToast: 'Copied, cleaned in {t}',
+      b1: 'No ads',
+      b2: 'No sign-up',
+      b3: 'No tracking',
+      b4: 'Works offline',
+      vsTitle: 'DIACR vs other diacritics removers',
+      vsText: 'Many free text tools pay for themselves with ads and send your text to a server. DIACR does neither, and it is faster because nothing leaves your browser.',
+      vsFeature: 'Feature',
+      vsOther: 'Typical free tools',
+      vsNote: 'Compared with typical free online text tools in general, not with any specific product.',
+      vsRows: [
+        ['Ads and pop-ups', 'None', 'Often banners and pop-ups'],
+        ['Your text sent to a server', 'Never, it stays in your browser', 'Usually'],
+        ['Speed', 'Instant, as you type, with a live timer', 'You wait for the page or the server'],
+        ['Copies the result for you', 'Yes, as soon as you paste', 'Rarely'],
+        ['Romanian ș and ş, ț and ţ', 'Both forms, upper and lower case', 'Often only one form'],
+        ['Whole .txt and .csv files', 'Yes, saved with the same name', 'Rarely'],
+        ['Account, limits or tracking', 'None', 'Sometimes'],
+        ['Works offline after loading', 'Yes', 'No'],
+        ['Open source', 'Yes, MIT License', 'Rarely']
+      ],
       names: {
         '\u00A0': 'no-break space', '\u202F': 'narrow no-break space', '\u2009': 'thin space',
         '\u200B': 'zero-width space', '\u200C': 'zero-width non-joiner', '\u200D': 'zero-width joiner',
@@ -666,8 +806,37 @@ function cleanText(input, opts) {
       why: 'De ce să elimini diacriticele? 15 motive',
       license: 'Licență MIT',
       security: 'Securitate',
-      developedBy: 'Dezvoltat de',
-      openSource: 'open source sub licența MIT',
+      terms: 'Termeni',
+      privacy: 'Politica de confidențialitate',
+      statTime: 'curățat în {t}',
+      demoTitle: 'Vezi cum funcționează',
+      demoText: 'Zece secunde, fără reclame, fără cont, nimic de instalat.',
+      demoAria: 'Demonstrație animată: textul cu diacritice este lipit, curățat și copiat automat.',
+      noAds: 'Fără reclame',
+      step1: 'Lipești oriunde',
+      step2: 'Diacritice eliminate',
+      step3: 'Copiat automat',
+      demoToast: 'Copiat, curățat în {t}',
+      b1: 'Fără reclame',
+      b2: 'Fără cont',
+      b3: 'Fără urmărire',
+      b4: 'Merge offline',
+      vsTitle: 'DIACR față de alte aplicații de eliminare a diacriticelor',
+      vsText: 'Multe aplicații gratuite de text se plătesc din reclame și trimit textul tău pe un server. DIACR nu face niciuna dintre ele și este mai rapid, pentru că nimic nu părăsește browserul.',
+      vsFeature: 'Funcție',
+      vsOther: 'Aplicații gratuite obișnuite',
+      vsNote: 'Comparație cu aplicațiile online gratuite obișnuite în general, nu cu un produs anume.',
+      vsRows: [
+        ['Reclame și pop-up-uri', 'Deloc', 'Des, bannere și pop-up-uri'],
+        ['Textul trimis pe un server', 'Niciodată, rămâne în browser', 'De obicei'],
+        ['Viteză', 'Instant, pe măsură ce scrii, cu cronometru', 'Aștepți pagina sau serverul'],
+        ['Copiază rezultatul pentru tine', 'Da, imediat ce lipești', 'Rar'],
+        ['ș și ş, ț și ţ românești', 'Ambele forme, mari și mici', 'Des doar o formă'],
+        ['Fișiere .txt și .csv întregi', 'Da, salvate cu același nume', 'Rar'],
+        ['Cont, limite sau urmărire', 'Deloc', 'Uneori'],
+        ['Merge offline după încărcare', 'Da', 'Nu'],
+        ['Open source', 'Da, licență MIT', 'Rar']
+      ],
       names: {
         '\u00A0': 'spațiu indivizibil', '\u202F': 'spațiu îngust indivizibil', '\u2009': 'spațiu subțire',
         '\u200B': 'spațiu de lățime zero', '\u200C': 'separator invizibil', '\u200D': 'legătură invizibilă',
@@ -720,6 +889,8 @@ function cleanText(input, opts) {
     root.setAttribute('lang', lang);
     document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) { el.innerHTML = t(el.getAttribute('data-i18n-html')); });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))); });
+    renderComparison();
     input.placeholder = t('inputPlaceholder');
     output.placeholder = t('outputPlaceholder');
     $('shortcutHint').textContent = t('shortcut', { key: modKey });
@@ -797,6 +968,115 @@ function cleanText(input, opts) {
   }
   showWord(WORDS[0]);
 
+  // Cleaning time, shown in the stats and in the demo
+  function formatMs(ms) {
+    // Browsers round their clocks to about 0.1 ms, so anything faster is shown as < 0.1 ms.
+    var digits = ms < 10 ? 1 : 0;
+    var nf = new Intl.NumberFormat(lang === 'ro' ? 'ro-RO' : 'en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    return ms < 0.1 ? '< ' + nf.format(0.1) + ' ms' : nf.format(ms) + ' ms';
+  }
+
+  // DIACR vs other tools
+  function renderComparison() {
+    var body = $('vsBody');
+    body.textContent = '';
+    I18N[lang].vsRows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      var th = document.createElement('th'); th.scope = 'row'; th.textContent = row[0]; tr.appendChild(th);
+      [['us', 'yes', '✓', row[1]], ['', 'no', '✕', row[2]]].forEach(function (c) {
+        var td = document.createElement('td'); if (c[0]) td.className = c[0];
+        var m = document.createElement('span'); m.className = 'mark ' + c[1]; m.setAttribute('aria-hidden', 'true'); m.textContent = c[2];
+        td.appendChild(m); td.appendChild(document.createTextNode(c[3])); tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+
+  // Demo player: paste, clean and copy, on a loop while it is on screen
+  var DEMO = [
+    'Bună ziua! Mă numesc Ștefan Țăndărică și locuiesc în Brașov.',
+    'Ofertă specială: „Pâine de casă” – doar 5 lei în Iași…',
+    'Søren Müller, Łódź, Kraków, Æthel, François'
+  ];
+  var player = $('player'), pIn = $('pIn'), pOut = $('pOut'), pKey = $('pKey'), pToast = $('pToast'), pProg = $('pProg');
+  var demoSteps = player.querySelectorAll('.p-steps li');
+  var demoIndex = 0, demoTimers = [], demoRunning = false;
+  var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function demoStep(n) { demoSteps.forEach(function (li, i) { li.classList.toggle('on', i === n); }); }
+  function later(fn, ms) { demoTimers.push(setTimeout(fn, ms)); }
+  function fillDemo(el, text, clean, hidden) {
+    el.textContent = '';
+    var spans = [];
+    Array.from(text).forEach(function (ch) {
+      var plain = cleanText(ch).text, changed = plain !== ch;
+      var s = document.createElement(changed ? 'mark' : 'span');
+      s.textContent = clean ? plain : ch;
+      if (hidden) s.className = 'h';
+      el.appendChild(s);
+      spans.push(s);
+    });
+    return spans;
+  }
+  function showToast(text) {
+    var started = performance.now();
+    cleanText(text);
+    pToast.textContent = t('demoToast', { t: formatMs(performance.now() - started) });
+    pToast.classList.add('show');
+  }
+  function runDemo() {
+    demoTimers.forEach(clearTimeout);
+    demoTimers = [];
+    var text = DEMO[demoIndex++ % DEMO.length];
+    pKey.textContent = modKey + ' + V';
+    pToast.classList.remove('show');
+    $('pInPane').classList.remove('on');
+    $('pOutPane').classList.remove('on');
+    pProg.style.transition = 'none';
+    pProg.style.width = '0';
+    if (reduceMotion) {
+      fillDemo(pIn, text, false, false);
+      fillDemo(pOut, text, true, false);
+      demoStep(2);
+      showToast(text);
+      return;
+    }
+    pIn.textContent = '';
+    pOut.textContent = '';
+    demoStep(0);
+    void pProg.offsetWidth;
+    pProg.style.transition = 'width 6.2s linear';
+    pProg.style.width = '100%';
+    later(function () { pKey.classList.add('press'); }, 400);
+    later(function () {
+      pKey.classList.remove('press');
+      fillDemo(pIn, text, false, false);
+      $('pInPane').classList.add('on');
+    }, 650);
+    later(function () {
+      demoStep(1);
+      $('pInPane').classList.remove('on');
+      $('pOutPane').classList.add('on');
+      var spans = fillDemo(pOut, text, true, true);
+      spans.forEach(function (s, i) { later(function () { s.classList.remove('h'); }, i * (900 / spans.length)); });
+    }, 1600);
+    later(function () { demoStep(2); showToast(text); }, 2900);
+    later(runDemo, 6400);
+  }
+  function startDemo() { if (!demoRunning) { demoRunning = true; runDemo(); } }
+  function stopDemo() { demoRunning = false; demoTimers.forEach(clearTimeout); demoTimers = []; }
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    runDemo();
+  } else {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting && !document.hidden) startDemo(); else stopDemo(); });
+    }, { threshold: 0.25 }).observe(player);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopDemo();
+      else if (player.getBoundingClientRect().top < innerHeight) startDemo();
+    });
+  }
+
   // Conversion and report
   function charCount(s) {
     var n = 0;
@@ -837,7 +1117,9 @@ function cleanText(input, opts) {
 
   function render() {
     var src = input.value;
+    var started = performance.now();
     var res = cleanText(src);
+    var elapsed = performance.now() - started;
     if (output.value !== res.text) output.value = res.text;
 
     var nf = new Intl.NumberFormat(lang === 'ro' ? 'ro-RO' : 'en-US');
@@ -851,6 +1133,14 @@ function cleanText(input, opts) {
       stats.appendChild(b);
       stats.appendChild(document.createTextNode(' ' + p[1]));
     });
+    if (src) {
+      var dot = document.createElement('span'); dot.className = 'dot'; dot.textContent = stats.querySelector('.dot').textContent; stats.appendChild(dot);
+      var around = t('statTime').split('{t}');
+      var time = document.createElement('b'); time.textContent = formatMs(elapsed);
+      stats.appendChild(document.createTextNode(around[0]));
+      stats.appendChild(time);
+      stats.appendChild(document.createTextNode(around[1] || ''));
+    }
 
     var list = $('changeList');
     list.textContent = '';
