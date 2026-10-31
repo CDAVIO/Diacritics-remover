@@ -166,6 +166,7 @@
 
   /* Hero */
   .hero { text-align: center; padding: 28px 0 8px; }
+  .hero.anim { padding: 40px 0 0; }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     padding: 6px 14px 6px 6px;
@@ -456,8 +457,6 @@
       </span>
       <h1 data-i18n-html="headline"></h1>
       <p class="lede" data-i18n-html="lede"></p>
-      <div class="stage" aria-hidden="true"><div class="word" id="word"></div></div>
-      <p class="caption" id="caption" aria-hidden="true"></p>
     </section>
 
     <section class="card" aria-label="Diacritics remover">
@@ -522,6 +521,11 @@
         </div>
       </div>
     </section>
+
+    <div class="hero anim" aria-hidden="true">
+      <div class="stage"><div class="word" id="word"></div></div>
+      <p class="caption" id="caption"></p>
+    </div>
 
     <section class="section" aria-labelledby="demoTitle">
       <h2 id="demoTitle" data-i18n="demoTitle"></h2>
